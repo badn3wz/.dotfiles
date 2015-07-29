@@ -1,0 +1,8 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_aliases: bash_aliases
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+
+
