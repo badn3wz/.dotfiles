@@ -1,4 +1,4 @@
-colorscheme onedark 
+colorscheme onedark
 " Note: Skip initialization for vim-tiny or vim-small.
  if 0 | endif
 
@@ -180,3 +180,4 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
 nnoremap q <Nop>
 set list
+set cursorline
