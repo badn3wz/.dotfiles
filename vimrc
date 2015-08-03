@@ -181,3 +181,5 @@ nmap <leader>bl :ls<CR>
 nnoremap q <Nop>
 set list
 set cursorline
+set pastetoggle=<F2>
+set clipboard=unnamed
