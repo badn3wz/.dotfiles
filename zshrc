@@ -92,3 +92,7 @@ zstyle :compinstall filename '/home/badn3wz/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+
+alias dedyk='ssh badn3wz@intactilis.pl'
+alias asg='cd ~/projects/asg/asg && source ../bin/activate'

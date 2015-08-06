@@ -1,6 +1,6 @@
 set list
 set cursorline
-set clipboard=unnamed
+set clipboard=unnamedplus
 nnoremap q <nop>
 set number
 set ruler
@@ -102,6 +102,7 @@ NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'tpope/vim-commentary/'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'scrooloose/syntastic'
+
 
 call neobundle#end()
 
