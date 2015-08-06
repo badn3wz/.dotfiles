@@ -96,3 +96,5 @@ compinit
 
 alias dedyk='ssh badn3wz@intactilis.pl'
 alias asg='cd ~/projects/asg/asg && source ../bin/activate'
+export EDITOR=/usr/bin/nvim
+
