@@ -102,6 +102,16 @@ NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'tpope/vim-commentary/'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 
 
 call neobundle#end()
