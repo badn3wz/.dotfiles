@@ -6,6 +6,7 @@ export ZSH=/home/badn3wz/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="random"
 DEFAULT_USER='badn3wz'
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,7 +50,7 @@ DEFAULT_USER='badn3wz'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, zsh-256color, archlinux, battery, git)
+plugins=(git, zsh-256color, archlinux, battery, git, common-aliases)
 
 # User configuration
 
@@ -62,11 +63,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='nvim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -92,9 +93,3 @@ zstyle :compinstall filename '/home/badn3wz/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
-
-alias dedyk='ssh badn3wz@intactilis.pl'
-alias asg='cd ~/projects/asg/asg && source ../bin/activate'
-export EDITOR=/usr/bin/nvim
-
