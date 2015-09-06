@@ -9,9 +9,12 @@ set showmatch
 " smartcase search
 set ignorecase
 set smartcase
+" buffer switching without save prompt
+set hidden
 
-color PaperColor 
-set background=dark
+
+color jellybeans
+" set background=dark
 
 let mapleader = ","
 
@@ -40,9 +43,6 @@ inoremap <S-Down> <Esc>:m+<CR>
 syntax on
 filetype off
 
-"POWERLINE (airline akshully)
-"let g:airline#extensions#tabline#enabled = 1
-
 
 "set vimfiler as default file manager
 let g:vimfiler_as_default_explorer = 1
@@ -68,7 +68,7 @@ let g:vimfiler_as_default_explorer = 1
 " ]]            Jump on next class or function (normal, visual, operator modes)
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 " Documentation
 let g:pymode_doc = 1
 let g:pymode_doc_key = 'K'
@@ -201,17 +201,19 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
-NeoBundle 'bling/vim-airline'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'klen/python-mode'
+NeoBundle 'bling/vim-airline' " p>owerline replacement
+NeoBundle 'Shougo/unite.vim' " buffer switch
+NeoBundle 'klen/python-mode' " python ide
 " NeoBundle 'Shougo/deoplete.nvim'
-NeoBundle 'tpope/vim-commentary/'
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'klen/python-mode'
-NeoBundle 'tpope/vim-surround'
-
+NeoBundle 'tpope/vim-commentary/' " comment out lines
+NeoBundle 'Valloric/YouCompleteMe' " autocompletion
+NeoBundle 'scrooloose/syntastic' " syntax checking?
+NeoBundle 'Shougo/vimfiler' " file browser
+NeoBundle 'tpope/vim-surround' " surround text with symbols ie. ' <
+NeoBundle 'KabbAmine/zeavim.vim' " zeal documentation
+NeoBundle 'chrisbra/Recover.vim' " diffing recovered swap file with saved file
+NeoBundle 'raimondi/delimitmate' " auto close parentesis and quotes
+" NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 "NeoBundle 'davidhalter/jedi-vim'
 
 
@@ -234,3 +236,4 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
+

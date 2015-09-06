@@ -5,7 +5,8 @@ export ZSH=/home/badn3wz/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="amuse"
 #ZSH_THEME="random"
 DEFAULT_USER='badn3wz'
 # Uncomment the following line to use case-sensitive completion.
@@ -51,6 +52,8 @@ DEFAULT_USER='badn3wz'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git, archlinux, common-aliases)
+powerline-daemon -q
+. /home/badn3wz/.local/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # User configuration
 
