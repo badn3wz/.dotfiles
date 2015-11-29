@@ -1,3 +1,4 @@
+set encoding=utf-8
 set list
 set cursorline
 set clipboard=unnamedplus
@@ -11,12 +12,13 @@ set ignorecase
 set smartcase
 " buffer switching without save prompt
 set hidden
+set noautochdir
 
-
+" color base16-flat
 color jellybeans
 " set background=dark
 
-let mapleader = ","
+let mapleader = ";"
 
 "sorting in visual mode
 vnoremap <Leader>s :sort<CR>
@@ -30,6 +32,40 @@ nnoremap <S-Up> :m-2<CR>
 nnoremap <S-Down> :m+<CR>
 inoremap <S-Up> <Esc>:m-2<CR>
 inoremap <S-Down> <Esc>:m+<CR>
+
+" buffer switching
+nnoremap <Leader>n :bn<CR>
+nnoremap <Leader>N :bp<CR>
+
+" easy moving through splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" move cursor in Insert Mode 
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
+
+" YouComleteMe settings
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"python with virtualenv support
+" py << EOF
+" import os
+" import sys
+" if 'VIRTUAL_ENV' in os.environ:
+"   project_base_dir = os.environ['VIRTUAL_ENV']
+"   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"   execfile(activate_this, dict(__file__=activate_this))
+" EOF
+
+" FUCKIN GENIOUS!!!!!!!!111
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 
 " indenting in visualmode
 " vnoremap < <gv "indentation
@@ -187,11 +223,11 @@ if has('vim_starting')
  "endif
 
 " Required:
-set runtimepath+=~/.nvim/bundle/neobundle.vim/
+set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('~/.nvim/bundle/'))
+call neobundle#begin(expand('~/.config/nvim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
