@@ -1,9 +1,7 @@
 - clean: ['~']
 
 - link:
-    ~/.bash_aliases: bash_aliases
-    ~/.vimrc: vimrc
     ~/.zshrc: zshrc
-    ~/.nvimrc: nvimrc
+    ~/.config/nvim: nvim/
 
 

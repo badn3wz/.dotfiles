@@ -1,7 +1,9 @@
+" nvim config
+" located in ~/.config/nvim/init.vim
 set encoding=utf-8
 set list
 set cursorline
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 nnoremap q <nop>
 " line numbering
 set number
@@ -13,10 +15,17 @@ set smartcase
 " buffer switching without save prompt
 set hidden
 set noautochdir
+" autoindent with spaces instead of tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " color base16-flat
-color jellybeans
+" color jellybeans
 " set background=dark
+set background=dark
+colorscheme PaperColor
+
 
 let mapleader = ";"
 
@@ -26,6 +35,11 @@ vnoremap <Leader>s :sort<CR>
 " File and buffer handling
 nnoremap <Leader>f :VimFilerExplorer<CR>
 nnoremap <Leader>o :Unite buffer<CR>
+nnoremap <Leader>t :Unite file_rec/async<cr>
+let g:unite_source_history_yank_enable = 1
+" call unite#filters#matcher_default#use(['matcher_fuzzy'])
+
+
 
 " Move line up and down
 nnoremap <S-Up> :m-2<CR>
@@ -50,18 +64,16 @@ inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 
 " YouComleteMe settings
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" let g:ycm_autoclose_preview_window_after_completion=1
+" map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-"python with virtualenv support
-" py << EOF
-" import os
-" import sys
-" if 'VIRTUAL_ENV' in os.environ:
-"   project_base_dir = os.environ['VIRTUAL_ENV']
-"   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"   execfile(activate_this, dict(__file__=activate_this))
-" EOF
+" Use deoplete.
+" let g:deoplete#enable_at_startup = 1
+" let g:python3_host_prog = '/usr/bin/python3'
+" let g:deoplete#auto_completion_start_length = 1
+" let g:deoplete#enable_smart_case = 1
+" set completeopt+=noinsert
+
 
 " FUCKIN GENIOUS!!!!!!!!111
 " Allow saving of files as sudo when I forgot to start vim using sudo.
@@ -84,12 +96,7 @@ filetype off
 let g:vimfiler_as_default_explorer = 1
 
 
-
-
-
-
 "PYTHON MODE SETTINGS
-
 
 " Python-mode
 " Activate rope
@@ -104,42 +111,45 @@ let g:vimfiler_as_default_explorer = 1
 " ]]            Jump on next class or function (normal, visual, operator modes)
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
-let g:pymode_rope = 0
+" let g:pymode_rope = 1
 " Documentation
-let g:pymode_doc = 1
-let g:pymode_doc_key = 'K'
+" let g:pymode_doc = 1
+" let g:pymode_doc_key = 'K'
 
-"Linting
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
-" Auto check on save
-let g:pymode_lint_write = 1
+" "Linting
+" let g:pymode_lint = 1
+" let g:pymode_lint_checker = "flake8"
+" " Auto check on save
+" let g:pymode_lint_write = 1
 
-" Support virtualenv
-let g:pymode_virtualenv = 1
+" " Support virtualenv
+" let g:pymode_virtualenv = 1
 
-" Enable breakpoints plugin
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>b'
+" " Enable breakpoints plugin
+" let g:pymode_breakpoint = 1
+" let g:pymode_breakpoint_bind = '<leader>b'
 
-" syntax highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
+" " syntax highlighting
+" let g:pymode_syntax = 1
+" let g:pymode_syntax_all = 1
+" let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+" let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
-" Don't autofold code
-let g:pymode_folding = 0
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
+" " Don't autofold code
+" let g:pymode_folding = 0
+
+" JEDI VIM
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+autocmd FileType python setlocal completeopt-=preview
+
+
+
 " PASTED FROM SOMEONEELSE
 "
 "
@@ -154,17 +164,8 @@ let g:airline_left_sep = ' '
 let g:airline_left_alt_sep = '|'
 let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = '|'
-let g:airline_theme= 'serene'
-"
-"
-"
-"
-"
-"
-"
-
-
-" let g:deoplete#enable_at_startup = 1
+" let g:airline_theme= 'serene'
+let g:airline_theme='PaperColor'
 
 
 
@@ -176,6 +177,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
 
 
 
@@ -183,26 +186,26 @@ let g:syntastic_check_on_wq = 0
 " Vim django detection 
 " https://gist.github.com/robbyt/8510934
 "
-function FindDjangoSettings2()
-    if strlen($VIRTUAL_ENV) && has('python')
-        let django_check = system("pip freeze | grep -q Django")
-        if v:shell_error
-            " echo 'django not installed.'
-        else
-            " echo 'django is installed.'
-            let output  = system("find $VIRTUAL_ENV \\( -wholename '*/lib/*' -or -wholename '*/install/' \\) -or \\( -name 'settings.py' -print0 \\) | tr '\n' ' '")
-            let outarray= split(output, '[\/]\+')
-            let module  = outarray[-2] . '.' . 'settings'
-            let syspath = system("python -c 'import sys; print sys.path' | tr '\n' ' ' ")
-            " let curpath = '/' . join(outarray[:-2], '/')
-            execute 'python import sys, os'
-            " execute 'python sys.path.append("' . curpath . '")'
-            " execute 'python sys.path.append("' . syspath . '")'
-            execute 'python sys.path = ' . syspath
-            execute 'python os.environ.setdefault("DJANGO_SETTINGS_MODULE", "' . module . '")'
-        endif
-    endif
-endfunction
+" function FindDjangoSettings2()
+"     if strlen($VIRTUAL_ENV) && has('python')
+"         let django_check = system("pip freeze | grep -q Django")
+"         if v:shell_error
+"             " echo 'django not installed.'
+"         else
+"             " echo 'django is installed.'
+"             let output  = system("find $VIRTUAL_ENV \\( -wholename '*/lib/*' -or -wholename '*/install/' \\) -or \\( -name 'settings.py' -print0 \\) | tr '\n' ' '")
+"             let outarray= split(output, '[\/]\+')
+"             let module  = outarray[-2] . '.' . 'settings'
+"             let syspath = system("python -c 'import sys; print sys.path' | tr '\n' ' ' ")
+"             " let curpath = '/' . join(outarray[:-2], '/')
+"             execute 'python import sys, os'
+"             " execute 'python sys.path.append("' . curpath . '")'
+"             " execute 'python sys.path.append("' . syspath . '")'
+"             execute 'python sys.path = ' . syspath
+"             execute 'python os.environ.setdefault("DJANGO_SETTINGS_MODULE", "' . module . '")'
+"         endif
+"     endif
+" endfunction
 
 
 
@@ -239,18 +242,21 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'bling/vim-airline' " p>owerline replacement
 NeoBundle 'Shougo/unite.vim' " buffer switch
-NeoBundle 'klen/python-mode' " python ide
+" NeoBundle 'klen/python-mode' " python ide
 " NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'tpope/vim-commentary/' " comment out lines
-NeoBundle 'Valloric/YouCompleteMe' " autocompletion
-NeoBundle 'scrooloose/syntastic' " syntax checking?
+" NeoBundle 'Valloric/YouCompleteMe' " autocompletion
+NeoBundle 'scrooloose/syntastic' " syntax checking, that blessed annoying split with lint errors
 NeoBundle 'Shougo/vimfiler' " file browser
 NeoBundle 'tpope/vim-surround' " surround text with symbols ie. ' <
-NeoBundle 'KabbAmine/zeavim.vim' " zeal documentation
+" NeoBundle 'KabbAmine/zeavim.vim' " zeal documentation
 NeoBundle 'chrisbra/Recover.vim' " diffing recovered swap file with saved file
 NeoBundle 'raimondi/delimitmate' " auto close parentesis and quotes
 " NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-"NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'NLKNguyen/papercolor-theme'
+NeoBundle 'ervandew/supertab'
 
 
 NeoBundle 'Shougo/vimproc.vim', {

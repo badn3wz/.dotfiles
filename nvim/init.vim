@@ -1,0 +1,1 @@
+/home/badn3wz/.dotfiles/nvimrc
