@@ -34,8 +34,8 @@ vnoremap <Leader>s :sort<CR>
 
 " File and buffer handling
 nnoremap <Leader>f :VimFilerExplorer<CR>
-nnoremap <Leader>o :Unite buffer<CR>
-nnoremap <Leader>t :Unite file_rec/async<cr>
+nnoremap <Leader>t :Unite buffer -no-split -start-insert<CR>
+nnoremap <Leader>o :Unite file_rec/async -no-split -start-insert<cr>
 let g:unite_source_history_yank_enable = 1
 " call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
