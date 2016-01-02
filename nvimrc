@@ -50,12 +50,18 @@ inoremap <S-Down> <Esc>:m+<CR>
 " buffer switching
 nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>N :bp<CR>
+nmap Q :b#<CR>
+
+" Faster save
+nnoremap <Leader>w :w<CR>
 
 " easy moving through splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-l> <C-W><C-L>
+nnoremap <C-h> <C-W><C-H>
+set splitbelow
+set splitright
 
 " move cursor in Insert Mode 
 inoremap <C-h> <C-o>h
@@ -173,48 +179,15 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" Syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
-
-
-
-
-" Vim django detection 
-" https://gist.github.com/robbyt/8510934
-"
-" function FindDjangoSettings2()
-"     if strlen($VIRTUAL_ENV) && has('python')
-"         let django_check = system("pip freeze | grep -q Django")
-"         if v:shell_error
-"             " echo 'django not installed.'
-"         else
-"             " echo 'django is installed.'
-"             let output  = system("find $VIRTUAL_ENV \\( -wholename '*/lib/*' -or -wholename '*/install/' \\) -or \\( -name 'settings.py' -print0 \\) | tr '\n' ' '")
-"             let outarray= split(output, '[\/]\+')
-"             let module  = outarray[-2] . '.' . 'settings'
-"             let syspath = system("python -c 'import sys; print sys.path' | tr '\n' ' ' ")
-"             " let curpath = '/' . join(outarray[:-2], '/')
-"             execute 'python import sys, os'
-"             " execute 'python sys.path.append("' . curpath . '")'
-"             " execute 'python sys.path.append("' . syspath . '")'
-"             execute 'python sys.path = ' . syspath
-"             execute 'python os.environ.setdefault("DJANGO_SETTINGS_MODULE", "' . module . '")'
-"         endif
-"     endif
-" endfunction
-
-
-
-
-
-
-
-
-
+let g:syntastic_style_error_symbol = '✠'
+let g:syntastic_style_warning_symbol = '≈'
 
 
 " Note: Skip initialization for vim-tiny or vim-small.
@@ -257,7 +230,7 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'NLKNguyen/papercolor-theme'
 NeoBundle 'ervandew/supertab'
-
+NeoBundle 'Yggdroot/indentLine' " visual indentation
 
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {

@@ -1,5 +1,6 @@
 Recover.vim
 delimitmate
+indentLine
 jedi-vim
 neobundle.vim
 papercolor-theme
