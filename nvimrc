@@ -1,5 +1,6 @@
 " nvim config
 " located in ~/.config/nvim/init.vim
+" press <c-l> to refresh unite file list
 set encoding=utf-8
 set list
 set cursorline
@@ -37,6 +38,7 @@ nnoremap <Leader>f :VimFilerExplorer<CR>
 nnoremap <Leader>t :Unite buffer -no-split -start-insert<CR>
 nnoremap <Leader>o :Unite file_rec/async -no-split -start-insert<cr>
 let g:unite_source_history_yank_enable = 1
+nnoremap <Leader>/ :Unite grep:.<cr>
 " call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 
@@ -188,6 +190,10 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_style_error_symbol = '✠'
 let g:syntastic_style_warning_symbol = '≈'
+let g:syntastic_python_flake8_args = "--ignore=E501"
+let g:syntastic_python_flake8_args = "--max-line-length=100"
+set colorcolumn=100
+
 
 
 " Note: Skip initialization for vim-tiny or vim-small.
@@ -231,6 +237,9 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'NLKNguyen/papercolor-theme'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'Yggdroot/indentLine' " visual indentation
+NeoBundle 'KabbAmine/vCoolor.vim'
+NeoBundle 'Valloric/MatchTagAlways'
+NeoBundle 'mattn/emmet-vim'
 
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {

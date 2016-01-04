@@ -1,5 +1,7 @@
+MatchTagAlways
 Recover.vim
 delimitmate
+emmet-vim
 indentLine
 jedi-vim
 neobundle.vim
@@ -7,6 +9,7 @@ papercolor-theme
 supertab
 syntastic
 unite.vim
+vCoolor.vim
 vim-airline
 vim-commentary
 vim-gitgutter
