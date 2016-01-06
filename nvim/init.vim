@@ -25,7 +25,9 @@ set expandtab
 " color jellybeans
 " set background=dark
 set background=dark
+" color hybrid
 colorscheme PaperColor
+" colorscheme base16-ocean
 
 
 let mapleader = ";"
@@ -164,16 +166,17 @@ autocmd FileType python setlocal completeopt-=preview
 "
 let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#right_sep = ' '
-let g:airline#extensions#tabline#right_alt_sep = '|'
-let g:airline_left_sep = ' '
-let g:airline_left_alt_sep = '|'
-let g:airline_right_sep = ' '
-let g:airline_right_alt_sep = '|'
+" let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline#extensions#tabline#right_sep = ' '
+" let g:airline#extensions#tabline#right_alt_sep = '|'
+" let g:airline_left_sep = ' '
+" let g:airline_left_alt_sep = '|'
+" let g:airline_right_sep = ' '
+" let g:airline_right_alt_sep = '|'
 " let g:airline_theme= 'serene'
 let g:airline_theme='PaperColor'
+let g:airline_powerline_fonts=1
 
 
 
@@ -240,6 +243,8 @@ NeoBundle 'Yggdroot/indentLine' " visual indentation
 NeoBundle 'KabbAmine/vCoolor.vim'
 NeoBundle 'Valloric/MatchTagAlways'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'edkolev/tmuxline.vim'
+NeoBundle 'chriskempson/base16-vim'
 
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
