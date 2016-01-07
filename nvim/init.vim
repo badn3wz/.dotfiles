@@ -3,7 +3,7 @@
 " press <c-l> to refresh unite file list
 set encoding=utf-8
 set list
-set cursorline
+" set cursorline
 set clipboard+=unnamedplus
 nnoremap q <nop>
 " line numbering
@@ -23,9 +23,10 @@ set expandtab
 
 " color base16-flat
 " color jellybeans
-" set background=dark
 set background=dark
 colorscheme PaperColor
+" color base16-oceanicnext
+" color base16-ocean
 
 
 let mapleader = ";"
@@ -241,6 +242,7 @@ NeoBundle 'Yggdroot/indentLine' " visual indentation
 NeoBundle 'KabbAmine/vCoolor.vim'
 NeoBundle 'Valloric/MatchTagAlways'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'chriskempson/base16-vim'
 
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {

@@ -5,6 +5,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.tmuxp: tmuxp
     ~/.yaourtrc: yaourtrc
+    ~/.config/termite: termite/
 
 - shell:
     - [sh neobundleinstall.sh]
@@ -12,3 +13,4 @@
         command: [sh systeminstall.sh]
         stdin: true
         stdout: true
+        stderr: true

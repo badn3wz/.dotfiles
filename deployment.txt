@@ -1,2 +1,0 @@
-run dotbot/bin/dotbot -d ./ -c install.yaml.conf
--d should point to .dotfiles directory, -c should point to config
