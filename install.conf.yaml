@@ -3,5 +3,5 @@
 - link:
     ~/.zshrc: zshrc
     ~/.config/nvim: nvim/
-
-
+    ~/.tmux.conf: tmux.conf
+    
