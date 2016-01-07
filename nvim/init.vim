@@ -56,6 +56,7 @@ nmap Q :b#<CR>
 
 " Faster save
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
 
 " easy moving through splits
 nnoremap <C-j> <C-W><C-J>

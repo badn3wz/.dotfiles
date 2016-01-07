@@ -4,6 +4,11 @@
     ~/.config/nvim: nvim/
     ~/.tmux.conf: tmux.conf
     ~/.tmuxp: tmuxp
+    ~/.yaourtrc: yaourtrc
 
 - shell:
     - [sh neobundleinstall.sh]
+    -
+        command: [sh systeminstall.sh]
+        stdin: true
+        stdout: true
