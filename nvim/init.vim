@@ -3,7 +3,7 @@
 " press <c-l> to refresh unite file list
 set encoding=utf-8
 set list
-set cursorline
+" set cursorline
 set clipboard+=unnamedplus
 nnoremap q <nop>
 " line numbering
@@ -23,11 +23,11 @@ set expandtab
 
 " color base16-flat
 " color jellybeans
-" set background=dark
 set background=dark
 " color hybrid
 colorscheme PaperColor
-" colorscheme base16-ocean
+" color base16-oceanicnext
+" color base16-ocean
 
 
 let mapleader = ";"
@@ -58,6 +58,7 @@ nmap Q :b#<CR>
 
 " Faster save
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
 
 " easy moving through splits
 nnoremap <C-j> <C-W><C-J>
