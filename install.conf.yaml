@@ -1,11 +1,18 @@
 - clean: ['~']
 
 - link:
-    ~/.config/nvim: nvim/
+    ~/.config/nvim: 
+        force: true
+        path: nvim/
     ~/.tmux.conf: tmux.conf
-    ~/.tmuxp: tmuxp
+    ~/.tmuxp: 
+        force: true
+        path: tmuxp
     ~/.yaourtrc: yaourtrc
     ~/.config/termite: termite/
+    ~/.zprezto/runcoms: 
+        force: true
+        path: preztorc
 
 - shell:
     - [sh neobundleinstall.sh]
