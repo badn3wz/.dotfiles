@@ -25,3 +25,4 @@ alias mig="python manage.py migrate"
 alias mkmig="python manage.py makemigrations"
 alias dot="cd ~/.dotfiles"
 
+eval $(dircolors ~/.dircolors)

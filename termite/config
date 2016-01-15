@@ -16,8 +16,8 @@ search_wrap = true
 #geometry = 640x480
  
 # 0.0: opaque, 1.0: transparent
-transparency = 0.0
-pseudo_transparency = false
+/* transparency = 0.0 */
+/* pseudo_transparency = false */
  
 # "system", "on" or "off"
 cursor_blink = system
@@ -26,11 +26,8 @@ cursor_blink = system
 cursor_shape = block
  
 # $BROWSER is used by default
-browser = firefox
+browser = chrome
  
-# word characters used for word selection
-# (default if unset: all graphic non-punctuation/space characters)
-#word_chars = -A-Za-z0-9,./?%&#:_=+@~
  
 [colors]
 # Base16 Oceanic Next

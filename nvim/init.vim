@@ -246,6 +246,7 @@ NeoBundle 'Valloric/MatchTagAlways'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'honza/vim-snippets'
 
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
