@@ -29,7 +29,6 @@ colorscheme PaperColor
 " color base16-oceanicnext
 " color base16-ocean
 
-
 let mapleader = ";"
 
 "sorting in visual mode
@@ -79,10 +78,10 @@ inoremap <C-l> <C-o>l
 " map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Use deoplete.
-" let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 " let g:python3_host_prog = '/usr/bin/python3'
-" let g:deoplete#auto_completion_start_length = 1
-" let g:deoplete#enable_smart_case = 1
+let g:deoplete#auto_completion_start_length = 1
+let g:deoplete#enable_smart_case = 1
 " set completeopt+=noinsert
 
 
@@ -198,6 +197,15 @@ let g:syntastic_python_flake8_args = "--ignore=E501"
 let g:syntastic_python_flake8_args = "--max-line-length=100"
 set colorcolumn=100
 
+let g:acp_enableAtStartup = 0
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplcache_min_syntax_length = 2
+" supertab tab from top to bottom
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 
 " Note: Skip initialization for vim-tiny or vim-small.
@@ -232,7 +240,6 @@ NeoBundle 'tpope/vim-commentary/' " comment out lines
 NeoBundle 'scrooloose/syntastic' " syntax checking, that blessed annoying split with lint errors
 NeoBundle 'Shougo/vimfiler' " file browser
 NeoBundle 'tpope/vim-surround' " surround text with symbols ie. ' <
-" NeoBundle 'KabbAmine/zeavim.vim' " zeal documentation
 NeoBundle 'chrisbra/Recover.vim' " diffing recovered swap file with saved file
 NeoBundle 'raimondi/delimitmate' " auto close parentesis and quotes
 " NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -247,6 +254,9 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'Shougo/neocomplcache.vim'
 
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
