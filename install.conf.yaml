@@ -15,9 +15,8 @@
         path: preztorc
 
 - shell:
-    - [sh neobundleinstall.sh]
     -
-        command: [sh systeminstall.sh]
+        command: [sh systeminstall.sh, Installing apps]
         stdin: true
         stdout: true
         stderr: true
