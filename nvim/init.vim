@@ -22,6 +22,8 @@ set shiftwidth=4
 set expandtab
 filetype plugin indent on
 
+"set all html as django html
+au BufNewFile,BufRead *.html set filetype=htmldjango
 " color base16-flat
 " color jellybeans
 set background=dark
@@ -108,8 +110,8 @@ let g:vimfiler_as_default_explorer = 1
 
 " JEDI VIM
 let g:jedi#goto_command = "<leader>d"
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = ""
+let g:jedi#goto_assignments_command = "<leader>h"
+let g:jedi#goto_definitions_command = "<leader>g"
 let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#completions_command = "<C-Space>"
@@ -153,7 +155,8 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 
 " Neomake
-autocmd! BufWritePost,BufEnter * Neomake
+" autocmd! BufWritePost,BufEnter * Neomake
+autocmd! BufWritePost * Neomake
 let g:neomake_open_list = 2
 let g:neomake_python_enabled_makers = ['flake8']
 
@@ -167,6 +170,21 @@ let g:neomake_error_sign = {
   \ 'text': '✗',
   \ 'texthl': 'ErrorMsg',
   \ }
+
+" Utlisnips config
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Tagbar config
+let g:tagbar_usearrows = 1
+nnoremap <leader>l :TagbarToggle<CR>
+
+au FileType htmldjango inoremap {% {%  %}<left><left><left>
+au FileType htmldjango inoremap {{ {{  }}<left><left><left>
+
+au FileType htmldjango set omnifunc=htmldjangocomplete#CompleteDjango
+let g:htmldjangocomplete_html_flavour = 'html5'
 
 
 call plug#begin()
@@ -197,4 +215,13 @@ Plug 'Shougo/neocomplcache.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'kchmck/vim-coffee-script'
 Plug 'benekastah/neomake'
+Plug 'sukima/xmledit'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'tpope/vim-ragtag'
+Plug 'majutsushi/tagbar'
+Plug 'mjbrownie/vim-htmldjango_omnicomplete'
+Plug 'othree/html5.vim'
+
 call plug#end()
