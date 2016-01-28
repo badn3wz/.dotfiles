@@ -1,3 +1,5 @@
 nvim/bundle/
 nvim/plugged/
 preztorc/private/
+nvim/.init.vim-rplugin~
+nvim/autoload/plug.vim.old

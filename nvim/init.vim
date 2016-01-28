@@ -2,6 +2,7 @@
 " located in ~/.config/nvim/init.vim
 " press <c-l> to refresh unite file list
 set encoding=utf-8
+let mapleader = ";"
 set list
 " set cursorline
 set clipboard+=unnamedplus
@@ -32,11 +33,11 @@ colorscheme PaperColor
 " color base16-oceanicnext
 " color base16-ocean
 
-let mapleader = ";"
 
 "sorting in visual mode
 vnoremap <Leader>s :sort<CR>
 
+set tags=tags;/
 " File and buffer handling
 nnoremap <Leader>f :VimFilerExplorer<CR>
 nnoremap <Leader>t :Unite buffer -no-split -start-insert<CR>
@@ -85,9 +86,15 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_completion_start_length = 1
 let g:deoplete#enable_smart_case = 1
 " set completeopt+=noinsert
+"
+" deoplete options concerning jedi-vim
+autocmd FileType python setlocal omnifunc=jedi#completions
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#smart_auto_mappings = 0
+let g:jedi#show_call_signatures = 0
 
 
-" FUCKIN GENIOUS!!!!!!!!111
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
@@ -118,7 +125,6 @@ let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
 autocmd FileType python setlocal completeopt-=preview
 
-
 let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme='PaperColor'
@@ -143,13 +149,13 @@ let g:airline_powerline_fonts=1
 " let g:syntastic_python_flake8_args = "--max-line-length=100"
 " set colorcolumn=100
 
-let g:acp_enableAtStartup = 0
-" Use neocomplcache.
-let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 2
+" let g:acp_enableAtStartup = 0
+" " Use neocomplcache.
+" let g:neocomplcache_enable_at_startup = 1
+" " Use smartcase.
+" let g:neocomplcache_enable_smart_case = 1
+" " Set minimum syntax keyword length.
+" let g:neocomplcache_min_syntax_length = 2
 " supertab tab from top to bottom
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
@@ -186,11 +192,17 @@ au FileType htmldjango inoremap {{ {{  }}<left><left><left>
 au FileType htmldjango set omnifunc=htmldjangocomplete#CompleteDjango
 let g:htmldjangocomplete_html_flavour = 'html5'
 
+" let g:pymode_rope = 0
+" let g:pymode_lint = 0
+" let g:pymode_rope_goto_definition_bind = "<C-]>"
+
+
+
 
 call plug#begin()
 Plug 'bling/vim-airline' " powerline replacement
 Plug 'Shougo/unite.vim' " buffer switch
-" Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-commentary/' " comment out lines
 " Plug 'Valloric/YouCompleteMe' " autocompletion
 " Plug 'scrooloose/syntastic' " syntax checking, that blessed annoying split with lint errors
@@ -211,7 +223,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'honza/vim-snippets'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chase/vim-ansible-yaml'
-Plug 'Shougo/neocomplcache.vim'
+" Plug 'Shougo/neocomplcache.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'kchmck/vim-coffee-script'
 Plug 'benekastah/neomake'
@@ -223,5 +235,6 @@ Plug 'tpope/vim-ragtag'
 Plug 'majutsushi/tagbar'
 Plug 'mjbrownie/vim-htmldjango_omnicomplete'
 Plug 'othree/html5.vim'
+" Plug 'klen/python-mode'
 
 call plug#end()
