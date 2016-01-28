@@ -24,5 +24,10 @@ alias runs="python manage.py runserver_plus"
 alias mig="python manage.py migrate"
 alias mkmig="python manage.py makemigrations"
 alias dot="cd ~/.dotfiles"
+alias proj="cd ~/projects"
+alias clones="cd ~/clones"
+alias yo="yaourt"
 
 eval $(dircolors ~/.dircolors)
+eval "$(fasd --init auto)"
+

@@ -27,11 +27,16 @@ filetype plugin indent on
 au BufNewFile,BufRead *.html set filetype=htmldjango
 " color base16-flat
 " color jellybeans
-set background=dark
 " color hybrid
-colorscheme PaperColor
+" colorscheme PaperColor
 " color base16-oceanicnext
 " color base16-ocean
+let base16colorspace=256
+color base16-monokai
+set background=dark
+
+" python better syntax highliting
+let python_highlight_all = 1
 
 
 "sorting in visual mode
@@ -127,7 +132,7 @@ autocmd FileType python setlocal completeopt-=preview
 
 let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='PaperColor'
+let g:airline_theme='base16'
 let g:airline_powerline_fonts=1
 
 
@@ -235,6 +240,8 @@ Plug 'tpope/vim-ragtag'
 Plug 'majutsushi/tagbar'
 Plug 'mjbrownie/vim-htmldjango_omnicomplete'
 Plug 'othree/html5.vim'
-" Plug 'klen/python-mode'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/mail.vim'
+Plug 'hdima/python-syntax'
 
 call plug#end()
