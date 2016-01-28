@@ -32,7 +32,7 @@ au BufNewFile,BufRead *.html set filetype=htmldjango
 " color base16-oceanicnext
 " color base16-ocean
 let base16colorspace=256
-color base16-monokai
+color base16-tomorrow
 set background=dark
 
 " python better syntax highliting
