@@ -34,6 +34,10 @@ au BufNewFile,BufRead *.html set filetype=htmldjango
 let base16colorspace=256
 color base16-tomorrow
 set background=dark
+set ai
+set backupdir=~/.config/nvim/backup//
+set directory=~/.config/nvim/swap//
+set undodir=~/.config/nvim/undo//
 
 " python better syntax highliting
 let python_highlight_all = 1
@@ -243,5 +247,6 @@ Plug 'othree/html5.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/mail.vim'
 Plug 'hdima/python-syntax'
+Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()

@@ -3,3 +3,7 @@ nvim/plugged/
 preztorc/private/
 nvim/.init.vim-rplugin~
 nvim/autoload/plug.vim.old
+tags
+nvim/backup/*
+nvim/swap/*
+nvim/undo/*
