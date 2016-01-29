@@ -13,6 +13,9 @@
     ~/.zprezto/runcoms: 
         force: true
         path: preztorc
+    ~/.dircolors:
+        force: true
+        path: dircolors
 
 - shell:
     -

@@ -53,6 +53,8 @@ nnoremap <Leader>t :Unite buffer -no-split -start-insert<CR>
 nnoremap <Leader>o :Unite file_rec/async -no-split -start-insert<cr>
 let g:unite_source_history_yank_enable = 1
 nnoremap <Leader>/ :Unite grep:.<cr>
+nnoremap <c-h> :Unite grep:.<cr>
+
 " call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 
