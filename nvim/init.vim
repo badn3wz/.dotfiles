@@ -64,6 +64,16 @@ nnoremap <S-Down> :m+<CR>
 inoremap <S-Up> <Esc>:m-2<CR>
 inoremap <S-Down> <Esc>:m+<CR>
 
+" required for moving line inside tmux
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
+
+
 " buffer switching
 nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>N :bp<CR>
@@ -198,7 +208,8 @@ let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 
 au FileType htmldjango inoremap {% {%  %}<left><left><left>
-au FileType htmldjango inoremap {{ {{  }}<left><left><left>
+au FileType htmldjango inoremap {%} {%  %}<left><left><left>
+au FileType htmldjango inoremap {{} {{  }}<left><left><left>
 
 au FileType htmldjango set omnifunc=htmldjangocomplete#CompleteDjango
 let g:htmldjangocomplete_html_flavour = 'html5'
@@ -249,6 +260,7 @@ Plug 'othree/html5.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/mail.vim'
 Plug 'hdima/python-syntax'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
+Plug 'dag/vim-fish'
 
 call plug#end()

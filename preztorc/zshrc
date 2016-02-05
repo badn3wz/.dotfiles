@@ -27,6 +27,7 @@ alias dot="cd ~/.dotfiles"
 alias proj="cd ~/projects"
 alias clones="cd ~/clones"
 alias yo="yaourt"
+alias lsd='ls --color=auto'
 
 eval $(dircolors ~/.dircolors)
 eval "$(fasd --init auto)"
