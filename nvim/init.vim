@@ -1,6 +1,11 @@
+" Unite tip: press ctrl-l while in file_rec window to refresh file list
+"
+" setting true colors in vim
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " nvim config
 " located in ~/.config/nvim/init.vim
 " press <c-l> to refresh unite file list
+
 set encoding=utf-8
 let mapleader = ";"
 set list
@@ -148,7 +153,8 @@ autocmd FileType python setlocal completeopt-=preview
 
 let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='base16'
+" let g:airline_theme='base16'
+autocmd vimenter * AirlineTheme base16
 let g:airline_powerline_fonts=1
 
 
