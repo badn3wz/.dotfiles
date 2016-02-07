@@ -1,11 +1,8 @@
 " Unite tip: press ctrl-l while in file_rec window to refresh file list
 "
-" setting true colors in vim
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " nvim config
 " located in ~/.config/nvim/init.vim
 " press <c-l> to refresh unite file list
-
 set encoding=utf-8
 let mapleader = ";"
 set list
@@ -31,7 +28,7 @@ filetype plugin indent on
 "set all html as django html
 au BufNewFile,BufRead *.html set filetype=htmldjango
 " color base16-flat
-" color jellybeans
+" colorscheme jellybean
 " color hybrid
 " colorscheme PaperColor
 " color base16-oceanicnext
@@ -40,6 +37,7 @@ let base16colorspace=256
 color base16-tomorrow
 set background=dark
 set ai
+
 set backupdir=~/.config/nvim/backup//
 set directory=~/.config/nvim/swap//
 set undodir=~/.config/nvim/undo//
@@ -146,16 +144,16 @@ let g:jedi#goto_command = "<leader>d"
 let g:jedi#goto_assignments_command = "<leader>h"
 let g:jedi#goto_definitions_command = "<leader>g"
 let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
+let g:jedi#usages_command = "<leader>u"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
 autocmd FileType python setlocal completeopt-=preview
 
 let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
-" let g:airline_theme='base16'
-autocmd vimenter * AirlineTheme base16
+let g:airline_theme='base16'
 let g:airline_powerline_fonts=1
+" let g:airline_extensions = []
 
 
 
@@ -205,9 +203,9 @@ let g:neomake_error_sign = {
   \ }
 
 " Utlisnips config
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Tagbar config
 let g:tagbar_usearrows = 1
@@ -233,7 +231,6 @@ Plug 'Shougo/unite.vim' " buffer switch
 Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-commentary/' " comment out lines
 " Plug 'Valloric/YouCompleteMe' " autocompletion
-" Plug 'scrooloose/syntastic' " syntax checking, that blessed annoying split with lint errors
 Plug 'Shougo/vimfiler' " file browser
 Plug 'tpope/vim-surround' " surround text with symbols ie. ' <
 Plug 'chrisbra/Recover.vim' " diffing recovered swap file with saved file
@@ -256,8 +253,8 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'kchmck/vim-coffee-script'
 Plug 'benekastah/neomake'
 Plug 'sukima/xmledit'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'tpope/vim-ragtag'
 Plug 'majutsushi/tagbar'
@@ -268,5 +265,7 @@ Plug 'vim-scripts/mail.vim'
 Plug 'hdima/python-syntax'
 " Plug 'ludovicchabant/vim-gutentags'
 Plug 'dag/vim-fish'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 
 call plug#end()

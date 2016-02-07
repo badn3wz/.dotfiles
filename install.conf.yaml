@@ -16,6 +16,8 @@
     ~/.dircolors:
         force: true
         path: dircolors
+    ~/.config/flake8:
+        path: flake8
 
 - shell:
     -

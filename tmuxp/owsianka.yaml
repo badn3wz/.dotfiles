@@ -1,0 +1,26 @@
+session_name: owsianka
+windows:
+  # Emptiness will simply open a blank pane, if no shell_command_before.
+  # All these are equivalent
+  - window_name: server&grunt
+    layout: even-horizontal
+    panes:
+    - shell_command: 
+      - ows
+      - python manage.py runserver_plus
+    - shell_command: 
+      - cd ~/projects/owsianka/frontend_src
+      - grunt watch
+  - window_name: shell&migrations
+    panes:
+    - shell_command:
+      - ows
+    - shell_command:
+      - ows
+  - window_name: editor
+    focus: True
+    layout: even-horizontal
+    panes:
+    - shell_command:
+      - ows
+      - vim

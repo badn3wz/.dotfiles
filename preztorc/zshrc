@@ -32,3 +32,5 @@ alias lsd='ls --color=auto'
 eval $(dircolors ~/.dircolors)
 eval "$(fasd --init auto)"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
