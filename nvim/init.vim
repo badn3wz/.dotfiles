@@ -6,6 +6,7 @@
 set encoding=utf-8
 let mapleader = ";"
 set list
+set wildmenu
 " set cursorline
 set clipboard+=unnamedplus
 nnoremap q <nop>
@@ -261,11 +262,13 @@ Plug 'majutsushi/tagbar'
 Plug 'mjbrownie/vim-htmldjango_omnicomplete'
 Plug 'othree/html5.vim'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/mail.vim'
+" Plug 'vim-scripts/mail.vim'
 Plug 'hdima/python-syntax'
 " Plug 'ludovicchabant/vim-gutentags'
 Plug 'dag/vim-fish'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'wellle/targets.vim'
+Plug 'kana/vim-textobj-user'
 
 
 call plug#end()
