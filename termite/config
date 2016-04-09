@@ -9,6 +9,7 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
+# font Roboto Mono Medium 12
 font = Hack 10
 # font = Fantasque Sans Mono 12
 # font = Inconsolata 10
@@ -37,7 +38,7 @@ browser = chrome
 
 foreground      = #c0c5ce
 foreground_bold = #c0c5ce
-cursor          = #c0c5ce
+# cursor          = #c0c5ce
 background      = #2b303b
 
 # 16 color space

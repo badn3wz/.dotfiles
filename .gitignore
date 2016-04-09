@@ -8,3 +8,7 @@ nvim/backup/*
 nvim/swap/*
 nvim/undo/*
 nvim/autoload/
+fish/fish_history
+fish/fishd.wheatley
+fish/functions
+fish/private_aliases.fish

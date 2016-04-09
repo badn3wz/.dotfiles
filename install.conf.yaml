@@ -18,7 +18,9 @@
         path: dircolors
     ~/.config/flake8:
         path: flake8
-    ~/.config/fish: fish/
+    ~/.config/fish:
+        force: true
+        path: fish
 
 # - shell:
 #     -
