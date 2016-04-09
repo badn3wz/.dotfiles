@@ -7,3 +7,4 @@ tags
 nvim/backup/*
 nvim/swap/*
 nvim/undo/*
+nvim/autoload/
