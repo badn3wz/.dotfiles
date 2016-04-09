@@ -3,6 +3,7 @@
 " nvim config
 " located in ~/.config/nvim/init.vim
 " press <c-l> to refresh unite file list
+set regexpengine=1
 set encoding=utf-8
 let mapleader = ";"
 set list
@@ -246,10 +247,9 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'mattn/emmet-vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'chriskempson/base16-vim'
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chase/vim-ansible-yaml'
-" Plug 'Shougo/neocomplcache.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'kchmck/vim-coffee-script'
 Plug 'benekastah/neomake'
@@ -259,10 +259,9 @@ Plug 'sukima/xmledit'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'tpope/vim-ragtag'
 Plug 'majutsushi/tagbar'
-Plug 'mjbrownie/vim-htmldjango_omnicomplete'
-Plug 'othree/html5.vim'
+" Plug 'mjbrownie/vim-htmldjango_omnicomplete'
+" Plug 'othree/html5.vim'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'vim-scripts/mail.vim'
 Plug 'hdima/python-syntax'
 " Plug 'ludovicchabant/vim-gutentags'
 Plug 'dag/vim-fish'
