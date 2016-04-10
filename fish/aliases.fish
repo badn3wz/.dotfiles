@@ -17,6 +17,11 @@ alias sp="python manage.py shell_plus"
 alias ipy="ipython"
 alias ipy2="ipython2"
 
+function packey
+    sudo pacman-key -r $argv
+    pacman-key -f $argv
+    sudo pacman-key --lsign-key $argv
+end
 
 
 # Git
