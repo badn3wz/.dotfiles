@@ -7,3 +7,4 @@ set VISUAL nvim
 # set -g DJANGO_DATABASE default
 source ~/.config/fish/aliases.fish
 source ~/.config/fish/private_aliases.fish
+set fish_greeting ""
