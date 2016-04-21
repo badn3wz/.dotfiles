@@ -114,11 +114,11 @@ let g:deoplete#enable_smart_case = 1
 " set completeopt+=noinsert
 "
 " deoplete options concerning jedi-vim
-autocmd FileType python setlocal omnifunc=jedi#completions
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#smart_auto_mappings = 0
-let g:jedi#show_call_signatures = 0
+" autocmd FileType python setlocal omnifunc=jedi#completions
+" let g:jedi#completions_enabled = 0
+" let g:jedi#auto_vim_configuration = 0
+" let g:jedi#smart_auto_mappings = 0
+" let g:jedi#show_call_signatures = 0
 
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
@@ -142,14 +142,14 @@ let g:vimfiler_as_default_explorer = 1
 
 
 " JEDI VIM
-let g:jedi#goto_command = "<leader>d"
-let g:jedi#goto_assignments_command = "<leader>h"
-let g:jedi#goto_definitions_command = "<leader>g"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>u"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#rename_command = "<leader>r"
-autocmd FileType python setlocal completeopt-=preview
+" let g:jedi#goto_command = "<leader>d"
+" let g:jedi#goto_assignments_command = "<leader>h"
+" let g:jedi#goto_definitions_command = "<leader>g"
+" let g:jedi#documentation_command = "K"
+" let g:jedi#usages_command = "<leader>u"
+" let g:jedi#completions_command = "<C-Space>"
+" let g:jedi#rename_command = "<leader>r"
+" autocmd FileType python setlocal completeopt-=preview
 
 let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
@@ -237,7 +237,8 @@ Plug 'Shougo/vimfiler' " file browser
 Plug 'tpope/vim-surround' " surround text with symbols ie. ' <
 Plug 'chrisbra/Recover.vim' " diffing recovered swap file with saved file
 Plug 'raimondi/delimitmate' " auto close parentesis and quotes
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
+Plug 'zchee/deoplete-jedi'
 Plug 'airblade/vim-gitgutter'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'ervandew/supertab'
