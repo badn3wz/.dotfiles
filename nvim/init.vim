@@ -264,7 +264,7 @@ Plug 'majutsushi/tagbar'
 " Plug 'othree/html5.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'hdima/python-syntax'
-" Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'dag/vim-fish'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'wellle/targets.vim'
