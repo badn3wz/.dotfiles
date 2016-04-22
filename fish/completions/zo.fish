@@ -1,0 +1,1 @@
+/home/badn3wz/.config/fisherman/z/completions/zo.fish
