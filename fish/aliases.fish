@@ -23,6 +23,10 @@ function packey
     sudo pacman-key --lsign-key $argv
 end
 
+function ftr
+    pip freeze | grep $argv >> req
+end
+
 
 # Git
 alias g='git'

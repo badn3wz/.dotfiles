@@ -52,6 +52,8 @@ let python_highlight_all = 1
 vnoremap <Leader>s :sort<CR>
 
 set tags=tags;/
+map <F10> :!ctags -R -f ./tags $VIRTUAL_ENV/lib/python*/site-packages<CR>
+autocmd BufWritePost,FileWritePost *.py :silent! !ctags -R -f ./tags $VIRTUAL_ENV/lib/python*/site-packages<CR>
 " File and buffer handling
 nnoremap <Leader>f :VimFilerExplorer<CR>
 nnoremap <Leader>t :Unite buffer -no-split -start-insert<CR>
@@ -264,7 +266,7 @@ Plug 'majutsushi/tagbar'
 " Plug 'othree/html5.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'hdima/python-syntax'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'dag/vim-fish'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'wellle/targets.vim'
