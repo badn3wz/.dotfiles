@@ -9,3 +9,7 @@ source ~/.config/fish/aliases.fish
 source ~/.config/fish/private_aliases.fish
 set fish_greeting ""
 set -gx PATH $PATH ~/.gem/ruby/2.3.0/bin
+
+for file in ~/.config/fish/conf.d/*.fish
+    source $file
+end
