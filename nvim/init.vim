@@ -270,7 +270,11 @@ Plug 'hdima/python-syntax'
 Plug 'dag/vim-fish'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'wellle/targets.vim'
-Plug 'kana/vim-textobj-user'
+" Plug 'kana/vim-textobj-user'
+Plug 'sheerun/vim-polyglot'
+Plug 'easymotion/vim-easymotion'
+Plug 'unblevable/quick-scope'
+" Plug 'justinmk/vim-sneak'
 
 
 call plug#end()
