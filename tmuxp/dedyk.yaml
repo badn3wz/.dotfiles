@@ -1,0 +1,9 @@
+session_name: dedyk
+windows:
+  # Emptiness will simply open a blank pane, if no shell_command_before.
+  # All these are equivalent
+  - window_name: badn3wz
+    layout: even-horizontal
+    panes:
+    - shell_command: 
+      - ssh badn3wz@intactilis.pl

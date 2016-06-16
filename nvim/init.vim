@@ -28,7 +28,7 @@ set expandtab
 filetype plugin indent on
 
 "set all html as django html
-au BufNewFile,BufRead *.html set filetype=htmldjango
+" au BufNewFile,BufRead *.html set filetype=htmldjango
 " color base16-flat
 " colorscheme jellybean
 " color hybrid
@@ -57,8 +57,14 @@ autocmd BufWritePost,FileWritePost *.py :silent! !ctags -R -f ./tags $VIRTUAL_EN
 " File and buffer handling
 nnoremap <Leader>f :VimFilerExplorer<CR>
 nnoremap <Leader>t :Unite buffer -no-split -start-insert<CR>
-nnoremap <Leader>o :Unite file_rec/async -no-split -start-insert<cr>
+nnoremap <Leader>o :Unite file_rec/neovim -no-split -start-insert<cr>
 let g:unite_source_history_yank_enable = 1
+let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts =
+\ '-i --vimgrep --hidden --ignore ' .
+\ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+let g:unite_source_grep_recursive_opt = ''
 nnoremap <Leader>/ :Unite grep:.<cr>
 nnoremap <c-h> :Unite grep:.<cr>
 
@@ -215,12 +221,12 @@ let g:neomake_error_sign = {
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 
-au FileType htmldjango inoremap {% {%  %}<left><left><left>
-au FileType htmldjango inoremap {%} {%  %}<left><left><left>
-au FileType htmldjango inoremap {{} {{  }}<left><left><left>
+" au FileType htmldjango inoremap {% {%  %}<left><left><left>
+" au FileType htmldjango inoremap {%} {%  %}<left><left><left>
+" au FileType htmldjango inoremap {{} {{  }}<left><left><left>
 
-au FileType htmldjango set omnifunc=htmldjangocomplete#CompleteDjango
-let g:htmldjangocomplete_html_flavour = 'html5'
+" au FileType htmldjango set omnifunc=htmldjangocomplete#CompleteDjango
+" let g:htmldjangocomplete_html_flavour = 'html5'
 
 " let g:pymode_rope = 0
 " let g:pymode_lint = 0
