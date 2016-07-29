@@ -32,11 +32,11 @@ filetype plugin indent on
 " color base16-flat
 " colorscheme jellybean
 " color hybrid
-" colorscheme PaperColor
+colorscheme PaperColor
 " color base16-oceanicnext
 " color base16-ocean
-let base16colorspace=256
-color base16-tomorrow
+" let base16colorspace=256
+" color base16-tomorrow
 set background=dark
 set ai
 
@@ -161,7 +161,7 @@ let g:vimfiler_as_default_explorer = 1
 
 let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='base16'
+" let g:airline_theme='base16'
 let g:airline_powerline_fonts=1
 " let g:airline_extensions = []
 
@@ -243,43 +243,43 @@ Plug 'tpope/vim-commentary/' " comment out lines
 " Plug 'Valloric/YouCompleteMe' " autocompletion
 Plug 'Shougo/vimfiler' " file browser
 Plug 'tpope/vim-surround' " surround text with symbols ie. ' <
-Plug 'chrisbra/Recover.vim' " diffing recovered swap file with saved file
+" Plug 'chrisbra/Recover.vim' " diffing recovered swap file with saved file
 Plug 'raimondi/delimitmate' " auto close parentesis and quotes
 " Plug 'davidhalter/jedi-vim'
-Plug 'zchee/deoplete-jedi'
+" Plug 'zchee/deoplete-jedi'
 Plug 'airblade/vim-gitgutter'
-Plug 'NLKNguyen/papercolor-theme'
+" Plug 'NLKNguyen/papercolor-theme'
 Plug 'ervandew/supertab'
 Plug 'Yggdroot/indentLine' " visual indentation
-Plug 'KabbAmine/vCoolor.vim'
-Plug 'Valloric/MatchTagAlways'
+" Plug 'KabbAmine/vCoolor.vim'
+" Plug 'Valloric/MatchTagAlways'
 Plug 'mattn/emmet-vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'chriskempson/base16-vim'
 " Plug 'honza/vim-snippets'
-Plug 'cakebaker/scss-syntax.vim'
+" Plug 'cakebaker/scss-syntax.vim'
 Plug 'chase/vim-ansible-yaml'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'kchmck/vim-coffee-script'
+" Plug 'kchmck/vim-coffee-script'
 Plug 'benekastah/neomake'
-Plug 'sukima/xmledit'
+" Plug 'sukima/xmledit'
 " Plug 'SirVer/ultisnips'
 " Plug 'honza/vim-snippets'
-Plug 'jmcantrell/vim-virtualenv'
-Plug 'tpope/vim-ragtag'
+" Plug 'jmcantrell/vim-virtualenv'
+" Plug 'tpope/vim-ragtag'
 Plug 'majutsushi/tagbar'
 " Plug 'mjbrownie/vim-htmldjango_omnicomplete'
 " Plug 'othree/html5.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'hdima/python-syntax'
 " Plug 'ludovicchabant/vim-gutentags'
-Plug 'dag/vim-fish'
+" Plug 'dag/vim-fish'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'wellle/targets.vim'
 " Plug 'kana/vim-textobj-user'
 Plug 'sheerun/vim-polyglot'
-Plug 'easymotion/vim-easymotion'
-Plug 'unblevable/quick-scope'
+" Plug 'easymotion/vim-easymotion'
+" Plug 'unblevable/quick-scope'
 " Plug 'justinmk/vim-sneak'
 
 
