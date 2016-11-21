@@ -6,10 +6,10 @@ endif
 
 
 " Required:
-set runtimepath+=/home/lburdzy/.random/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.random/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('/home/lburdzy/.random')
+call dein#begin('~/.random')
 
 " Let dein manage dein
 " Required:
