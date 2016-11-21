@@ -23,6 +23,13 @@ alias asg="source ~/venvs/asg/bin/activate && cd ~/projects/asg/"
 alias prm="source ~/venvs/prime/bin/activate && cd ~/projects/prime/src"
 alias dlmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0"
 alias pmsc="source ~/venvs/misc/bin/activate && cd ~/projects/"
+alias jr="source ~/venvs/jupyter/bin/activate && cd ~/projects/jupyter"
+alias img="source ~/projects/imgur/venv/bin/activate && cd ~/projects/imgur"
+alias arm="source ~/projects/arma/armaenv/bin/activate && cd ~/projects/arma/code"
+alias zi="source ~/venvs/zugi/bin/activate && cd ~/projects/zugi/src"
+alias pmm="source ~/projects/prime-money/venv/bin/activate && cd ~/projects/prime-money/src"
+alias tkt="source ~/projects/trakt/trakt/bin/activate && ~/projects/trakt"
+alias fmi="source ~/projects/forum-migracja/env/bin/activate && ~/projects/forum-migracja/scripts"
 
 freeze_to_req () {
 
