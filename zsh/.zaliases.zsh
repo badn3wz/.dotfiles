@@ -1,6 +1,6 @@
 alias gst="git status"
 alias gs="git status"
-alias dedyk="tmuxp load dedyk.yaml"
+alias dedyk="tmuxp load ~/.tmuxp/dedyk.yaml"
 alias yo="yaourt"
 alias yi="yaourt -S"
 alias ys="yaourt -Ss"
@@ -30,6 +30,10 @@ alias zi="source ~/venvs/zugi/bin/activate && cd ~/projects/zugi/src"
 alias pmm="source ~/projects/prime-money/venv/bin/activate && cd ~/projects/prime-money/src"
 alias tkt="source ~/projects/trakt/trakt/bin/activate && ~/projects/trakt"
 alias fmi="source ~/projects/forum-migracja/env/bin/activate && ~/projects/forum-migracja/scripts"
+alias bgm="source ~/projects/boardgames/zsenv/bin/activate && ~/projects/boardgames/website/src"
+alias obey="source ~/projects/obey/obeyenv/bin/activate && ~/projects/obey/superlists"
+alias mgw="mwg"
+alias mwg="source ~/projects/matura-w-g-owie/mwg/bin/activate && ~/projects/matura-w-g-owie/src"
 
 freeze_to_req () {
 
