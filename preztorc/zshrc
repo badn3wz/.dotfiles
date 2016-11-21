@@ -30,7 +30,12 @@ alias yo="yaourt"
 alias lsd='ls --color=auto'
 
 eval $(dircolors ~/.dircolors)
-eval "$(fasd --init auto)"
 
+if [[ -s "${ZDOTDIR:-$HOME}/.zaliases.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zaliases.zsh"
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source ~/.rvm/scripts/rvm

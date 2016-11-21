@@ -42,8 +42,11 @@ typeset -gU cdpath fpath mailpath path
 # )
 
 # Set the list of directories that Zsh searches for programs.
+# ruby lines from work, might need to remove them
 path=(
   /usr/local/{bin,sbin}
+  ~/.gem/ruby/2.3.0/bin
+  /root/.gem/ruby/2.3.0/bin
   $path
 )
 
@@ -72,3 +75,4 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+export GEM_HOME=~/.gem
