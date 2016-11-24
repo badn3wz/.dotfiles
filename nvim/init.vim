@@ -22,8 +22,11 @@ call dein#add('Shougo/deoplete.nvim')
 call dein#add('tpope/vim-commentary')
 call dein#add('tpope/vim-surround')
 call dein#add('tpope/vim-fugitive')
-call dein#add('neomake/neomake')
+" call dein#add('neomake/neomake')
 call dein#add('airblade/vim-gitgutter')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/vimfiler')
+call dein#add('w0rp/ale')
 
 
 " Pretty theme
@@ -87,7 +90,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 set background=dark
-colorscheme kalisi
+colorscheme neodark
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<tab>"
@@ -108,18 +111,35 @@ nmap Q :b#<CR>
 set hidden
 set noautochdir
 
-" neomake settings
+" " neomake settings
 
-" autocmd! BufWritePost,BufEnter * Neomake
-autocmd! BufWritePost,InsertLeave *.py Neomake
-let g:neomake_open_list = 2
-let g:neomake_python_enabled_makers = ['flake8']
-let g:neomake_warning_sign = {
-  \ 'text': '⚠',
-  \ 'texthl': 'WarningMsg',
-  \ }
+" " autocmd! BufWritePost,BufEnter * Neomake
+" autocmd! BufWritePost,InsertLeave *.py Neomake
+" let g:neomake_open_list = 2
+" let g:neomake_python_enabled_makers = ['flake8']
+" let g:neomake_warning_sign = {
+"   \ 'text': '⚠',
+"   \ 'texthl': 'WarningMsg',
+"   \ }
 
-let g:neomake_error_sign = {
-  \ 'text': '✗',
-  \ 'texthl': 'ErrorMsg',
-  \ }
+" let g:neomake_error_sign = {
+"   \ 'text': '✗',
+"   \ 'texthl': 'ErrorMsg',
+"   \ }
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+set nolazyredraw
+
+
+nnoremap <Leader>f :VimFilerExplorer<CR>
+nnoremap <Leader>t :Unite buffer -no-split -start-insert<CR>
+nnoremap <Leader>o :Unite file_rec/neovim -no-split -start-insert<cr>
+let g:unite_source_history_yank_enable = 1
+let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts =
+\ '-i --vimgrep --hidden --ignore ' .
+\ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+let g:unite_source_grep_recursive_opt = ''
+nnoremap <Leader>/ :Unite grep:.<cr>
+nnoremap <c-h> :Unite grep:.<cr>

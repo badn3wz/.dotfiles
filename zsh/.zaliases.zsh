@@ -34,6 +34,8 @@ alias bgm="source ~/projects/boardgames/zsenv/bin/activate && ~/projects/boardga
 alias obey="source ~/projects/obey/obeyenv/bin/activate && ~/projects/obey/superlists"
 alias mgw="mwg"
 alias mwg="source ~/projects/matura-w-g-owie/mwg/bin/activate && ~/projects/matura-w-g-owie/src"
+alias red="source ~/projects/reddit/red/bin/activate && cd ~/projects/reddit/source"
+alias eg="source ~/projects/portal-premium/env/bin/activate && cd ~/projects/portal-premium/premium-website/src"
 
 freeze_to_req () {
 
