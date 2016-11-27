@@ -26,7 +26,12 @@ call dein#add('tpope/vim-fugitive')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimfiler')
+
+" linter
 call dein#add('w0rp/ale')
+
+" auto close brackets and quotes
+call dein#add('jiangmiao/auto-pairs')
 
 
 " Pretty theme
@@ -106,6 +111,7 @@ nnoremap <Leader>q :q<CR>
 " buffer switching
 nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>N :bp<CR>
+nnoremap <Leader>d :bd<CR>
 nmap Q :b#<CR>
 " buffer switching without prompt for save
 set hidden
