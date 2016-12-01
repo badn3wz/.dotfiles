@@ -26,6 +26,7 @@ call dein#add('tpope/vim-fugitive')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimfiler')
+call dein#add('vim-scripts/LargeFile')
 
 " linter
 call dein#add('w0rp/ale')
@@ -104,6 +105,7 @@ set clipboard+=unnamedplus
 
 " leader and keyboard shortcuts
 let mapleader = ";"
+nnoremap Q q
 nnoremap q <nop>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -112,7 +114,7 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>N :bp<CR>
 nnoremap <Leader>d :bd<CR>
-nmap Q :b#<CR>
+nmap <c-q> :b#<CR>
 " buffer switching without prompt for save
 set hidden
 set noautochdir
@@ -149,3 +151,5 @@ let g:unite_source_grep_default_opts =
 let g:unite_source_grep_recursive_opt = ''
 nnoremap <Leader>/ :Unite grep:.<cr>
 nnoremap <c-h> :Unite grep:.<cr>
+
+let g:LargeFile=10
