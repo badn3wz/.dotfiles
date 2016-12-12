@@ -27,12 +27,14 @@ call dein#add('airblade/vim-gitgutter')
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimfiler')
 call dein#add('vim-scripts/LargeFile')
+"call dein#add('sheerun/vim-polyglot')
 
 " linter
 call dein#add('w0rp/ale')
 
 " auto close brackets and quotes
 call dein#add('jiangmiao/auto-pairs')
+call dein#add('tmhedberg/SimpylFold')
 
 
 " Pretty theme
@@ -42,6 +44,7 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('KeitaNakamura/neodark.vim')
 call dein#add('freeo/vim-kalisi')
+call dein#add('morhetz/gruvbox')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -96,7 +99,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 set background=dark
-colorscheme neodark
+" colorscheme neodark
+colorscheme gruvbox
+" colorscheme kalisi
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<tab>"
@@ -153,3 +158,7 @@ nnoremap <Leader>/ :Unite grep:.<cr>
 nnoremap <c-h> :Unite grep:.<cr>
 
 let g:LargeFile=10
+
+set foldlevel=99
+
+set termguicolors
