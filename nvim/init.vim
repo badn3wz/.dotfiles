@@ -1,4 +1,4 @@
-" let g:python3_host_prog = '/usr/bin/python3'
+" let g:python2_host_prog = '/usr/bin/python3'
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -24,10 +24,12 @@ call dein#add('tpope/vim-surround')
 call dein#add('tpope/vim-fugitive')
 " call dein#add('neomake/neomake')
 call dein#add('airblade/vim-gitgutter')
-call dein#add('Shougo/unite.vim')
+" call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimfiler')
 call dein#add('vim-scripts/LargeFile')
-"call dein#add('sheerun/vim-polyglot')
+" call dein#add('sheerun/vim-polyglot')
+call dein#add('junegunn/fzf', {'merged': 0})
+call dein#add('junegunn/fzf.vim', {'depends': 'fzf'})
 
 " linter
 call dein#add('w0rp/ale')
@@ -145,20 +147,28 @@ set nolazyredraw
 
 
 nnoremap <Leader>f :VimFilerExplorer<CR>
-nnoremap <Leader>t :Unite buffer -no-split -start-insert<CR>
-nnoremap <Leader>o :Unite file_rec/neovim -no-split -start-insert<cr>
-let g:unite_source_history_yank_enable = 1
-let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
-let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts =
-\ '-i --vimgrep --hidden --ignore ' .
-\ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
-let g:unite_source_grep_recursive_opt = ''
-nnoremap <Leader>/ :Unite grep:.<cr>
-nnoremap <c-h> :Unite grep:.<cr>
+" nnoremap <Leader>t :Unite buffer -no-split -start-insert<CR>
+" nnoremap <Leader>o :Unite file_rec/neovim -no-split -start-insert<cr>
+" let g:unite_source_history_yank_enable = 1
+" let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
+" let g:unite_source_grep_command = 'ag'
+" let g:unite_source_grep_default_opts =
+" \ '-i --vimgrep --hidden --ignore ' .
+" \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+" let g:unite_source_grep_recursive_opt = ''
+" nnoremap <Leader>/ :Unite grep:.<cr>
+" nnoremap <c-h> :Unite grep:.<cr>
 
 let g:LargeFile=10
 
 set foldlevel=99
 
 set termguicolors
+
+" FZF mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+nmap <leader>o :Files<CR>
+nmap <leader>b :Buffers<CR>
+nmap <leader>c :Commits<CR>

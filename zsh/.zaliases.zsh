@@ -19,6 +19,8 @@ alias zal="nvim ~/.zaliases.zsh"
 alias sp="python manage.py shell_plus"
 alias ipy="ipython"
 alias ipy2="ipython2"
+alias pt="python -m pytest"
+alias cpt="coverage run -m pytest"
 alias asg="source ~/venvs/asg/bin/activate && cd ~/projects/asg/"
 alias prm="source ~/venvs/prime/bin/activate && cd ~/projects/prime/src"
 alias dlmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0"
@@ -40,7 +42,7 @@ alias eg="source ~/projects/portal-premium/env/bin/activate && cd ~/projects/por
 freeze_to_req () {
 
     if [[ -a "./req" ]]; then
-        pip freeze | grep "$*" >> req;
+        pip freeze | fzf -m >> req;
         echo "success!"
     else
         echo "req file does not exist!"
