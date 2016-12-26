@@ -4,7 +4,6 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-
 " Required:
 set runtimepath+=~/.random/repos/github.com/Shougo/dein.vim
 
@@ -22,14 +21,11 @@ call dein#add('Shougo/deoplete.nvim')
 call dein#add('tpope/vim-commentary')
 call dein#add('tpope/vim-surround')
 call dein#add('tpope/vim-fugitive')
-" call dein#add('neomake/neomake')
 call dein#add('airblade/vim-gitgutter')
-" call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/vimfiler')
 call dein#add('vim-scripts/LargeFile')
-" call dein#add('sheerun/vim-polyglot')
 call dein#add('junegunn/fzf', {'merged': 0})
 call dein#add('junegunn/fzf.vim', {'depends': 'fzf'})
+call dein#add('scrooloose/nerdtree')
 
 " linter
 call dein#add('w0rp/ale')
@@ -48,6 +44,11 @@ call dein#add('KeitaNakamura/neodark.vim')
 call dein#add('freeo/vim-kalisi')
 call dein#add('morhetz/gruvbox')
 
+" call dein#add('sheerun/vim-polyglot')
+" call dein#add('neomake/neomake')
+" call dein#add('Shougo/unite.vim')
+" call dein#add('Shougo/vimfiler')
+
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
@@ -62,7 +63,7 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
-"End dein Scripts-------------------------
+" End dein Scripts-------------------------
 
 " let g:python_host_prog = '/usr/bin/python'
 
@@ -146,7 +147,7 @@ let g:ale_sign_warning = '⚠'
 set nolazyredraw
 
 
-nnoremap <Leader>f :VimFilerExplorer<CR>
+" nnoremap <Leader>f :VimilerExplorer<CR>
 " nnoremap <Leader>t :Unite buffer -no-split -start-insert<CR>
 " nnoremap <Leader>o :Unite file_rec/neovim -no-split -start-insert<cr>
 " let g:unite_source_history_yank_enable = 1
@@ -172,3 +173,6 @@ omap <leader><tab> <plug>(fzf-maps-o)
 nmap <leader>o :Files<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>c :Commits<CR>
+nmap <leader>l :Lines<CR>
+nmap <leader>g :GFiles?<CR>
+nmap <leader>f :NERDTree<CR>

@@ -39,20 +39,25 @@ alias mwg="source ~/projects/matura-w-g-owie/mwg/bin/activate && ~/projects/matu
 alias red="source ~/projects/reddit/red/bin/activate && cd ~/projects/reddit/source"
 alias eg="source ~/projects/portal-premium/env/bin/activate && cd ~/projects/portal-premium/premium-website/src"
 
-freeze_to_req () {
-
-    if [[ -a "./req" ]]; then
-        pip freeze | fzf -m >> req;
-        echo "success!"
+freeze_to_file () {
+    if [ -z $1 ]
+    then
+        echo "You need to specify requirements file name"
+    elif [[ -a $1 ]] 
+    then
+        pip freeze | fzf -m >> $1;
+        echo "Success!"
     else
-        echo "req file does not exist!"
+        echo "File does not exist!"
     fi
 }
-alias ftr="freeze_to_req"
+alias ftr="freeze_to_file requirements.txt"
+alias ftf="freeze_to_file"
+alias ftrq="freeze_to_file req"
 
 add_pacman_key() {
     sudo pacman-key -r $1
     sudo pacman-key -f $1
     sudo pacman-key --lsignk-key $1
 }
-alias packey="add_pacman_key"
+alias packey="add_pacman_key
