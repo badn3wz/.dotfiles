@@ -60,4 +60,4 @@ add_pacman_key() {
     sudo pacman-key -f $1
     sudo pacman-key --lsignk-key $1
 }
-alias packey="add_pacman_key
+alias packey="add_pacman_key"
