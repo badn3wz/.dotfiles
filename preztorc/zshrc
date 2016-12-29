@@ -13,21 +13,6 @@ fi
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/runcoms/private/aliases.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/private/aliases.zsh"
 fi
-# Customize to your needs...
-alias gst="git status"
-alias yu="yaourt -Syua"
-alias yi="yaourt -S"
-alias ys="yaourt -Ss"
-alias zrc="nvim ~/.zshrc"
-alias nrc="nvim ~/.config/nvim/init.vim"
-alias runs="python manage.py runserver_plus"
-alias mig="python manage.py migrate"
-alias mkmig="python manage.py makemigrations"
-alias dot="cd ~/.dotfiles"
-alias proj="cd ~/projects"
-alias clones="cd ~/clones"
-alias yo="yaourt"
-alias lsd='ls --color=auto'
 
 eval $(dircolors ~/.dircolors)
 

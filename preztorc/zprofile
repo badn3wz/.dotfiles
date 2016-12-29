@@ -76,3 +76,5 @@ fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 export GEM_HOME=~/.gem
+export KEYTIMEOUT=1
+

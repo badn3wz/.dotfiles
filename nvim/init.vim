@@ -175,4 +175,11 @@ nmap <leader>b :Buffers<CR>
 nmap <leader>c :Commits<CR>
 nmap <leader>l :Lines<CR>
 nmap <leader>g :GFiles?<CR>
+"
+" file manager
 nmap <leader>f :NERDTree<CR>
+
+" faster split switching
+nnoremap <silent> <C-w> <C-w><C-w>
+inoremap <silent> <C-w> <Esc><C-w><C-w>
+vnoremap <silent> <C-w> <Esc><C-w><C-w>
