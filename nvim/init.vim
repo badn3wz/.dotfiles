@@ -170,12 +170,17 @@ set termguicolors
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
-nmap <leader>o :Files<CR>
+nmap <leader>o :HFiles<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>c :Commits<CR>
 nmap <leader>l :Lines<CR>
 nmap <leader>g :GFiles?<CR>
-"
+
+" command for hidden files
+command! -bang -nargs=? -complete=dir HFiles
+  \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --ignore .git -g ""'}, <bang>0)
+
+
 " file manager
 nmap <leader>f :NERDTree<CR>
 
