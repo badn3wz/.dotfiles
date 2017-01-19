@@ -43,6 +43,7 @@ call dein#add('vim-airline/vim-airline-themes')
 call dein#add('KeitaNakamura/neodark.vim')
 call dein#add('freeo/vim-kalisi')
 call dein#add('morhetz/gruvbox')
+call dein#add('kristijanhusak/vim-hybrid-material')
 
 " call dein#add('sheerun/vim-polyglot')
 " call dein#add('neomake/neomake')
@@ -95,15 +96,16 @@ set ignorecase
 set smartcase
 set incsearch
 set nohlsearch
-" color seoul256
 set t_Co=256   " This is may or may not needed.
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 set background=dark
+let g:enable_bold_font = 1
 " colorscheme neodark
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme hybrid_material
 " colorscheme kalisi
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
