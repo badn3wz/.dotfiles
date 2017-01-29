@@ -187,6 +187,6 @@ command! -bang -nargs=? -complete=dir HFiles
 nmap <leader>f :NERDTree<CR>
 
 " faster split switching
-nnoremap <silent> <C-w> <C-w><C-w>
-inoremap <silent> <C-w> <Esc><C-w><C-w>
-vnoremap <silent> <C-w> <Esc><C-w><C-w>
+" nnoremap <silent> <C-w> <C-w><C-w>
+" inoremap <silent> <C-w> <Esc><C-w><C-w>
+" vnoremap <silent> <C-w> <Esc><C-w><C-w>
