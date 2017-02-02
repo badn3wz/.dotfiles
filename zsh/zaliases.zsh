@@ -76,3 +76,5 @@ add_pacman_key() {
     sudo pacman-key --lsign-key $1
 }
 alias packey="add_pacman_key"
+alias vi="nvim"
+alias vim="nvim"

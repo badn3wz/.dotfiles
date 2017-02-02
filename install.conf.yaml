@@ -1,9 +1,6 @@
 - clean: ['~']
 
 - link:
-    ~/:
-        force: true
-        path: zsh/
     ~/.config/nvim: 
         force: true
         path: nvim/
@@ -11,4 +8,19 @@
     ~/.yaourtrc: yaourtrc
     ~/.config/flake8:
         path: flake8
+    ~/.zshrc:
+        force: true
+        path: zsh/zshrc
+    ~/.zaliases.zsh: zsh/zaliases.zsh
 
+- shell:
+    -
+        command: sh dein_installer.zsh
+        stdin: true
+        stdout: true
+        stderr: true
+    -
+        command: sh fzf_installer.zsh
+        stdin: true
+        stdout: true
+        stderr: true
