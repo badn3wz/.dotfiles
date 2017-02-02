@@ -1,1 +1,0 @@
-/home/badn3wz/.config/fisherman/z/conf.d/z.fish
