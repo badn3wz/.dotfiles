@@ -11,7 +11,8 @@
     ~/.zshrc:
         force: true
         path: zsh/zshrc
-    ~/.zaliases.zsh: zsh/zaliases.zsh
+    ~/.zaliases.zsh: zsh/zaliases
+    ~/.zenv.zsh: zsh/zenv
 
 - shell:
     -
@@ -24,3 +25,4 @@
         stdin: true
         stdout: true
         stderr: true
+    - [mkdir ~/.private]

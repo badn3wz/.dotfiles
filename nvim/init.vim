@@ -1,4 +1,4 @@
-" let g:python2_host_prog = '/usr/bin/python3'
+let g:python2_host_prog = '/usr/bin/python2'
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved

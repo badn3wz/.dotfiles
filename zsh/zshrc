@@ -12,6 +12,9 @@ fi
 if [[ -s "${ZDOTDIR:-$HOME}/.zaliases.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zaliases.zsh"
 fi
+if [[ -s "${ZDOTDIR:-$HOME}/.zenv.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zenv.zsh"
+fi
 # Customize to your needs...
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

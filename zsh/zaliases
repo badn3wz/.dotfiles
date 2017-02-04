@@ -25,6 +25,7 @@ alias nrc="nvim ~/.config/nvim/init.vim"
 alias zrc="nvim ~/.zshrc"
 alias zpr="nvim ~/.zpreztorc"
 alias zal="nvim ~/.zaliases.zsh"
+alias zenv="nvim ~/.zenv.zsh"
 
 # yaourt & pacman
 alias yo="yaourt"
@@ -52,7 +53,7 @@ alias arm="source ~/projects/arma/armaenv/bin/activate && cd ~/projects/arma/cod
 alias tkt="source ~/projects/trakt/trakt/bin/activate && ~/projects/trakt"
 alias bgm="source ~/projects/boardgames/zsenv/bin/activate && ~/projects/boardgames/website/src"
 alias obey="source ~/projects/obey/obeyenv/bin/activate && ~/projects/obey/superlists"
-alias red="source ~/projects/reddit/red/bin/activate && cd ~/projects/reddit/source"
+alias red="source ~/venvs/red/bin/activate && cd ~/projects/reddit-notifier"
 
 # ================================================================================================= #
 # functions                                                                                         #
@@ -78,3 +79,4 @@ add_pacman_key() {
 alias packey="add_pacman_key"
 alias vi="nvim"
 alias vim="nvim"
+alias la="ls -al"
