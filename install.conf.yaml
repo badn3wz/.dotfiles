@@ -25,4 +25,4 @@
         stdin: true
         stdout: true
         stderr: true
-    - [mkdir ~/.private]
+    - [mkdir -p ~/.private]
