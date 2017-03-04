@@ -16,7 +16,7 @@ alias ftrq="freeze_to_file req"
 # django
 alias mig="python manage.py migrate"
 alias mkmig="python manage.py makemigrations"
-alias runs="python manage.py runserver_plus"
+alias runs="python manage.py runserver"
 alias sp="python manage.py shell_plus"
 alias mng="python manage.py"
 
@@ -54,6 +54,8 @@ alias tkt="source ~/projects/trakt/trakt/bin/activate && ~/projects/trakt"
 alias bgm="source ~/projects/boardgames/zsenv/bin/activate && ~/projects/boardgames/website/src"
 alias obey="source ~/projects/obey/obeyenv/bin/activate && ~/projects/obey/superlists"
 alias red="source ~/venvs/red/bin/activate && cd ~/projects/reddit-notifier"
+alias aio="source ~/venvs/aio/bin/activate && cd ~/projects/aio"
+alias zs="cd ~/projects/zgrajmy_sie && pipenv shell"
 
 # ================================================================================================= #
 # functions                                                                                         #
