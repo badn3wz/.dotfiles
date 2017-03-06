@@ -5,6 +5,7 @@ alias gs="git status"
 # python 
 alias ipy="ipython"
 alias ipy2="ipython2"
+alias ipy3="ipython3"
 alias pt="python -m pytest"
 alias cpt="coverage run -m pytest"
 

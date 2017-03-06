@@ -36,7 +36,7 @@ call dein#add('jiangmiao/auto-pairs')
 call dein#add('tmhedberg/SimpylFold')
 
 
-" Pretty theme
+" Pretty themes
 call dein#add('junegunn/seoul256.vim')
 call dein#add('NLKNguyen/papercolor-theme')
 call dein#add('vim-airline/vim-airline')
