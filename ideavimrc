@@ -1,0 +1,5 @@
+set surround
+set ignorecase
+set smartcase
+set incsearch
+set nohlsearch

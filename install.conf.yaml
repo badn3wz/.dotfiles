@@ -13,6 +13,7 @@
         path: zsh/zshrc
     ~/.zaliases.zsh: zsh/zaliases
     ~/.zenv.zsh: zsh/zenv
+    ~/.ideavimrc: ideavimrc
 
 - shell:
     -
