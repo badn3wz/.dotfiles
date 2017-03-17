@@ -12,6 +12,7 @@
         force: true
         path: zsh/zshrc
     ~/.zaliases.zsh: zsh/zaliases
+    ~/.zimrc: zsh/zimrc
     ~/.zenv.zsh: zsh/zenv
     ~/.ideavimrc: ideavimrc
 
