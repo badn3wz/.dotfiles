@@ -67,7 +67,7 @@ if dein#check_install()
 endif
 " End dein Scripts-------------------------
 
-" let g:python_host_prog = '/usr/bin/python'
+let g:python_host_prog = '/usr/bin/python3'
 
 " call deoplete#enable()
 
