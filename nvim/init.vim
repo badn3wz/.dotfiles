@@ -26,7 +26,11 @@ call dein#add('vim-scripts/LargeFile')
 call dein#add('junegunn/fzf', {'merged': 0})
 call dein#add('junegunn/fzf.vim', {'depends': 'fzf'})
 call dein#add('scrooloose/nerdtree')
+
+" lang specific plugins
 call dein#add('Vimjas/vim-python-pep8-indent')
+" call dein#add('chase/vim-ansible-yaml')
+call dein#add('shmay/vim-yaml')
 
 " linter
 call dein#add('w0rp/ale')
