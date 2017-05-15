@@ -31,6 +31,7 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('Vimjas/vim-python-pep8-indent')
 " call dein#add('chase/vim-ansible-yaml')
 call dein#add('shmay/vim-yaml')
+call dein#add('tweekmonster/django-plus.vim')
 
 " linter
 call dein#add('w0rp/ale')
