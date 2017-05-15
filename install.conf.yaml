@@ -13,6 +13,7 @@
         path: zsh/zshrc
     ~/.zaliases.zsh: zsh/zaliases
     ~/.zimrc: zsh/zimrc
+    ~/.zim/git-flow-completion.zsh: zsh/git-flow-completion
     ~/.zenv.zsh: zsh/zenv
     ~/.ideavimrc: ideavimrc
 

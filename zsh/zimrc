@@ -13,7 +13,7 @@
 # These dependencies are noted on the respective module's README.md.
 zmodules=(directory environment git history input utility meta custom \
           syntax-highlighting history-substring-search prompt completion \
-          fasd git-info spectrum)
+          fasd git-info spectrum pacman)
 
 
 ###################
