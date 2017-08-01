@@ -1,6 +1,7 @@
 # git
 alias gst="git status"
 alias gs="git status"
+alias gcof="interactive_checkout"
 
 # python 
 alias ipy="ipython"
@@ -44,6 +45,7 @@ alias proj="cd ~/projects"
 alias dedyk="tmuxp load ~/.tmuxp/dedyk.yaml"
 alias lsd='ls --color=auto'
 alias dlmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0"
+alias pass="< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-32};echo;"
 
 # projects
 alias pmsc="source ~/venvs/misc/bin/activate && cd ~/projects/"
@@ -79,6 +81,10 @@ add_pacman_key() {
     sudo pacman-key -f $1
     sudo pacman-key --lsign-key $1
 }
+interactive_checkout() {
+    git checkout $(git branch | fzf)
+}
+
 alias packey="add_pacman_key"
 alias vi="nvim"
 alias vim="nvim"
