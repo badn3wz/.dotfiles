@@ -8,6 +8,7 @@ alias ipy="ipython"
 alias ipy2="ipython2"
 alias ipy3="ipython3"
 alias pt="python -m pytest"
+alias dpt="pytest --nomigrations --reuse-db"
 alias cpt="coverage run -m pytest"
 
 # fzf
