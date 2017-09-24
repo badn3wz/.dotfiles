@@ -24,3 +24,4 @@ fi
 # Customize to your needs...
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH=~/.local/bin:$PATH
