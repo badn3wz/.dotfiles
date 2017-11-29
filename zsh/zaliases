@@ -31,10 +31,10 @@ alias zal="nvim ~/.zaliases.zsh"
 alias zenv="nvim ~/.zenv.zsh"
 
 # yaourt & pacman
-alias yo="yaourt"
-alias yi="yaourt -S"
-alias ys="yaourt -Ss"
-alias yu="yaourt -Syua"
+alias yo="pac"
+alias yi="pac -S"
+alias ys="pac -Ss"
+alias yu="pac -Syu"
 alias packey="add_pacman_key"
 
 # directories
