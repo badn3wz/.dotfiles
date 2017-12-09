@@ -59,7 +59,8 @@ alias bgm="source ~/projects/boardgames/zsenv/bin/activate && ~/projects/boardga
 alias obey="source ~/projects/obey/obeyenv/bin/activate && ~/projects/obey/superlists"
 alias red="source ~/venvs/red/bin/activate && cd ~/projects/reddit-notifier"
 alias aio="source ~/venvs/aio/bin/activate && cd ~/projects/aio"
-alias zs="cd ~/projects/zgrajmy_sie && pipenv shell"
+alias zs="cd ~/projects/zgrajmy-sie-backend && pipenv shell"
+alias rent="python ~/projects/rent/rent.py"
 
 # ================================================================================================= #
 # functions                                                                                         #
