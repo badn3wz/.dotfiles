@@ -31,10 +31,10 @@ alias zal="nvim ~/.zaliases.zsh"
 alias zenv="nvim ~/.zenv.zsh"
 
 # yaourt & pacman
-alias yo="pac"
-alias yi="pac -S"
-alias ys="pac -Ss"
-alias yu="pac -Syu"
+alias yo="yay"
+alias yi="yay -S"
+alias ys="yay -Ss"
+alias yu="yay -Syu"
 alias packey="add_pacman_key"
 
 # directories
@@ -47,6 +47,7 @@ alias dedyk="tmuxp load ~/.tmuxp/dedyk.yaml"
 alias lsd='ls --color=auto'
 alias dlmp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0"
 alias pass="< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-32};echo;"
+alias ls='exa'
 
 # projects
 alias pmsc="source ~/venvs/misc/bin/activate && cd ~/projects/"
@@ -61,6 +62,7 @@ alias red="source ~/venvs/red/bin/activate && cd ~/projects/reddit-notifier"
 alias aio="source ~/venvs/aio/bin/activate && cd ~/projects/aio"
 alias zs="cd ~/projects/zgrajmy-sie-backend && pipenv shell"
 alias rent="python ~/projects/rent/rent.py"
+alias cal="cd ~/projects/cal/ && pipenv shell"
 
 # ================================================================================================= #
 # functions                                                                                         #
